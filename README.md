@@ -1,4 +1,4 @@
-# Spring boot, Hibernate, MySQL REST API
+# Task management system - Spring boot, MySQL,REST API, Postman.
 
 A simple Web-based Task Management System using Spring boot that demonstrates the usage of RESTful API using Spring boot, Hibernate and MySQL. 
 
@@ -11,6 +11,7 @@ A simple Web-based Task Management System using Spring boot that demonstrates th
 * Hibernate
 * Maven
 * Eclipse Oxygen
+* Postman 
 
 ## Steps to install
 
