@@ -33,7 +33,7 @@ public class TaskDAOImpl implements TaskDAO {
 	@Override
 	public void save(Task task) {
 		Session currentSession = entityManager.unwrap(Session.class);
-		currentSession.save(task);
+		currentSession.saveOrUpdate(task);
 	}
 
 	@Override

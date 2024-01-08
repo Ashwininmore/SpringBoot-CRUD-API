@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,5 +42,10 @@ public class TaskController {
 	public String delete(@PathVariable int id) {
 		taskService.delete(id);
 		return "Task has been deleted with id:"+id;
+	}
+	@PutMapping("/task")
+	public Task update(@RequestBody Task taskObj) {
+		taskService.save(taskObj);
+		return taskObj;
 	}
 }
