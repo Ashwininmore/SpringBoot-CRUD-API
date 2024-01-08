@@ -25,19 +25,22 @@ public class TaskDAOImpl implements TaskDAO {
 
 	@Override
 	public Task get(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session currentSession=entityManager.unwrap(Session.class);
+		Task taskObj = currentSession.get(Task.class, id);
+		return taskObj;
 	}
 
 	@Override
 	public void save(Task task) {
-		// TODO Auto-generated method stub
-		
+		Session currentSession = entityManager.unwrap(Session.class);
+		currentSession.save(task);
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		Session currentSession = entityManager.unwrap(Session.class);
+		Task taskObj = currentSession.get(Task.class, id);
+		currentSession.delete(taskObj);
 		
 	}
 

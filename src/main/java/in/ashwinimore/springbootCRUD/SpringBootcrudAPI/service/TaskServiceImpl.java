@@ -22,19 +22,17 @@ public class TaskServiceImpl implements TaskService {
 	@Transactional
 	@Override
 	public Task get(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return taskDAO.get(id);
 	}
 	@Transactional
 	@Override
 	public void save(Task task) {
-		// TODO Auto-generated method stub
-		
+		taskDAO.save(task);		
 	}
 	@Transactional
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		taskDAO.delete(id);
 		
 	}
 
